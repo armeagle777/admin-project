@@ -1,0 +1,136 @@
+{
+  "advertisements": [
+    {
+      "id": 3,
+      "city": "Yerevan",
+      "address": "Shahumyan street 23 ap.2",
+      "zip": "0033",
+      "price": 223344,
+      "rooms": 232323,
+      "bathrooms": 2,
+      "living_sqft": 120,
+      "other_details": "Very good appartment jaaaan uxxxx"
+    },
+    {
+      "city": "Bla-bla",
+      "address": "Shahumyan street 23 ap.2",
+      "zip": "0056",
+      "price": 12000,
+      "rooms": 3,
+      "bathrooms": 2,
+      "living_sqft": 120,
+      "other_details": "wauuuu",
+      "id": 4
+    },
+    {
+      "city": "Bla-bla",
+      "address": "Shahumyan street 23 ap.2",
+      "zip": "0056",
+      "price": 12000,
+      "rooms": 3,
+      "bathrooms": 2,
+      "living_sqft": 120,
+      "other_details": "wauuuu, ......",
+      "id": 5
+    },
+    {
+      "city": "Bla-bla",
+      "address": "Shahumyan street 23 ap.2",
+      "zip": "0056",
+      "price": 12000,
+      "rooms": 3,
+      "bathrooms": 2,
+      "living_sqft": 120,
+      "other_details": "wauuuu, ......",
+      "id": 6
+    },
+    {
+      "city": "Bla-bla",
+      "address": "Shahumyan street 23 ap.2",
+      "zip": "0056",
+      "price": 12000,
+      "rooms": 3,
+      "bathrooms": 2,
+      "living_sqft": 120,
+      "other_details": "wauuuu, ......",
+      "id": 7
+    },
+    {
+      "city": "Bla-bla",
+      "address": "Shahumyan street 23 ap.2",
+      "zip": "0056",
+      "price": 12000,
+      "rooms": 3,
+      "bathrooms": 2,
+      "living_sqft": 120,
+      "other_details": "wauuuu, ......",
+      "id": 8
+    },
+    {
+      "city": "Bla-bla",
+      "address": "Shahumyan street 23 ap.2",
+      "zip": "0056",
+      "price": 12000,
+      "rooms": 3,
+      "bathrooms": 2,
+      "living_sqft": 120,
+      "other_details": "wauuuu, ......",
+      "id": 9
+    },
+    {
+      "city": "Bla-bla",
+      "address": "Shahumyan street 23 ap.2",
+      "zip": "0056",
+      "price": 12000,
+      "rooms": 3,
+      "bathrooms": 2,
+      "living_sqft": 120,
+      "other_details": "wauuuu, ......",
+      "id": 10
+    },
+    {
+      "city": "Bla-bla",
+      "address": "Shahumyan street 23 ap.2",
+      "zip": "0056",
+      "price": 12000,
+      "rooms": 3,
+      "bathrooms": 2,
+      "living_sqft": 120,
+      "other_details": "wauuuu, ......",
+      "id": 11
+    },
+    {
+      "city": "Bla-bla",
+      "address": "Shahumyan street 23 ap.2",
+      "zip": "0056",
+      "price": 12000,
+      "rooms": 3,
+      "bathrooms": 2,
+      "living_sqft": 120,
+      "other_details": "wauuuu, ......",
+      "id": 12
+    },
+    {
+      "city": "Bla-bla",
+      "address": "Shahumyan street 23 ap.2",
+      "zip": "0056",
+      "price": 12000,
+      "rooms": 3,
+      "bathrooms": 2,
+      "living_sqft": 120,
+      "other_details": "wauuuu, ......",
+      "id": 13
+    },
+    {
+      "city": "Yerevan",
+      "address": "Shahumyan street 23",
+      "zip": "2233",
+      "price": 44,
+      "rooms": 3,
+      "bathrooms": 2,
+      "living_sqft": 1222,
+      "other_details": "asdasd asd asd as  gdfg dfg",
+      "id": 14
+    }
+  ]
+}
