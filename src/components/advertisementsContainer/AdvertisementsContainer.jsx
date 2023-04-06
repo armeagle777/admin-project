@@ -1,14 +1,20 @@
-import { Box, Grid, Stack, Typography } from '@mui/material';
+import { Grid, Stack } from '@mui/material';
 
 import Card from '../card';
 import Pagination from '../pagination';
 
-const Table = ({ advertisements, totalCount, setPageNumber, pageNumber }) => {
+const AdvertisementsContainer = ({
+    advertisements,
+    totalCount,
+    setPageNumber,
+    pageNumber,
+}) => {
     const pagesCount = Math.ceil(totalCount / 10);
 
-    const handleChangePage = (event, newPage) => {
+    const handleChangePage = (_, newPage) => {
         setPageNumber(newPage);
     };
+
     return (
         <Grid
             container
@@ -31,4 +37,4 @@ const Table = ({ advertisements, totalCount, setPageNumber, pageNumber }) => {
     );
 };
 
-export default Table;
+export default AdvertisementsContainer;

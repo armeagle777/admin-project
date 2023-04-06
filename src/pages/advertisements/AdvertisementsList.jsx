@@ -4,9 +4,9 @@ import Stack from '@mui/material/Stack';
 
 import { getAdvertisements } from '../../api/advertisementsApi';
 
-import AlertBox from '../alertBox';
-import AdvertisementsContainer from '../advertisementsContainer';
-import CircularProgress from '../circularProgress';
+import AlertBox from '../../components/alertBox';
+import AdvertisementsContainer from '../../components/advertisementsContainer';
+import CircularProgress from '../../components/circularProgress';
 
 const AdvertisementsList = () => {
     const [pageNumber, setPageNumber] = useState(1);

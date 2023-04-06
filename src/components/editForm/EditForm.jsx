@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import SaveIcon from '@mui/icons-material/Save';
-import { Box, TextField, Typography } from '@mui/material';
+import { Box, Stack, TextField, Typography } from '@mui/material';
 import Button from '@mui/material/Button';
 import InputAdornment from '@mui/material/InputAdornment';
+import CloseIcon from '@mui/icons-material/CloseOutlined';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { toast } from 'react-toastify';
 
 import { updateAdvertisement } from '../../api/advertisementsApi';
 
@@ -25,6 +27,7 @@ const EditForm = ({ advertisement }) => {
     );
 
     const navigate = useNavigate();
+    const notify = () => toast.success('Advertisement successfully updated');
 
     const queryClient = useQueryClient();
 
@@ -33,6 +36,7 @@ const EditForm = ({ advertisement }) => {
             console.log('success');
             queryClient.invalidateQueries('advertisements');
             navigate('/advertisements');
+            notify();
         },
     });
 
@@ -144,15 +148,35 @@ const EditForm = ({ advertisement }) => {
                     maxRows={4}
                     sx={{ width: '95%', m: 1 }}
                 />
-                <Button
-                    sx={{ width: '95%', m: 1, p: 1 }}
-                    size='medium'
-                    type='submit'
-                    variant='outlined'
-                    startIcon={<SaveIcon />}
+                <Stack
+                    direction='row'
+                    spacing={16}
+                    sx={{
+                        width: '96%',
+                        mt: 1,
+                        pl: 1,
+                    }}
                 >
-                    Update
-                </Button>
+                    <Button
+                        sx={{ width: '60%', p: 1 }}
+                        size='medium'
+                        variant='outlined'
+                        color='error'
+                        onClick={() => navigate(-1)}
+                        startIcon={<CloseIcon />}
+                    >
+                        Cancel
+                    </Button>
+                    <Button
+                        sx={{ width: '60%', m: 1, p: 1 }}
+                        size='medium'
+                        type='submit'
+                        variant='outlined'
+                        startIcon={<SaveIcon />}
+                    >
+                        Update
+                    </Button>
+                </Stack>
             </form>
         </Box>
     );

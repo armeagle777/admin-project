@@ -1,3 +1,5 @@
+import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { useNavigate } from 'react-router-dom';
 import MediaCard from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -7,23 +9,16 @@ import Typography from '@mui/material/Typography';
 import DollarIcon from '@mui/icons-material/AttachMoney';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
-import { getRandomNumber } from '../../helpers/helperFunctions';
+import { getRandomSrc } from '../../helpers/helperFunctions';
 import { deleteAdvertisement } from '../../api/advertisementsApi';
 
 const Card = ({ info }) => {
     const navigate = useNavigate();
+    const notify = () => toast.success('Advertisement Successfully deleted');
 
-    const imageUrls = {
-        1: 'house.jpg',
-        2: 'house_2.jpeg',
-        3: 'house_3.jpg',
-        4: 'house_4.jpg',
-    };
-
-    const randomSrc = `src/assets/${imageUrls[getRandomNumber(1, 5)]}`;
+    const randomSrc = getRandomSrc();
 
     const {
         city,
@@ -41,6 +36,7 @@ const Card = ({ info }) => {
     const deleteAdvertisementMutation = useMutation(deleteAdvertisement, {
         onSuccess: () => {
             queryClient.invalidateQueries('advertisements');
+            notify();
         },
     });
 
