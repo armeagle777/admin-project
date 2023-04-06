@@ -1,4 +1,3 @@
-import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { useNavigate } from 'react-router-dom';
 import MediaCard from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -9,14 +8,12 @@ import Typography from '@mui/material/Typography';
 import DollarIcon from '@mui/icons-material/AttachMoney';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { toast } from 'react-toastify';
 
 import { getRandomSrc } from '../../helpers/helperFunctions';
-import { deleteAdvertisement } from '../../api/advertisementsApi';
+import CardRow from '../cardRow';
 
-const Card = ({ info }) => {
+const Card = ({ info, handleOpen }) => {
     const navigate = useNavigate();
-    const notify = () => toast.success('Advertisement Successfully deleted');
 
     const randomSrc = getRandomSrc();
 
@@ -32,14 +29,6 @@ const Card = ({ info }) => {
         id,
     } = info;
 
-    const queryClient = useQueryClient();
-    const deleteAdvertisementMutation = useMutation(deleteAdvertisement, {
-        onSuccess: () => {
-            queryClient.invalidateQueries('advertisements');
-            notify();
-        },
-    });
-
     return (
         <MediaCard sx={{ width: 265 }}>
             <CardMedia
@@ -52,24 +41,18 @@ const Card = ({ info }) => {
                     {price}
                     <DollarIcon color='primary' />
                 </Typography>
-                <Typography variant='body2' color='text.secondary'>
-                    {`Address: ${address}`}
-                </Typography>
-                <Typography variant='body2' color='text.secondary'>
-                    {`City: ${city}`}
-                </Typography>
-                <Typography variant='body2' color='text.secondary'>
-                    {`Index: ${zip}`}
-                </Typography>
-                <Typography variant='body2' color='text.secondary'>
-                    {`Rooms: ${rooms} | Bathrooms: ${bathrooms}`}
-                </Typography>
-                <Typography variant='body2' color='text.secondary'>
-                    {`Living sqFt: ${living_sqft} `}
-                </Typography>
-                <Typography variant='body2' color='text.secondary'>
-                    {other_details}
-                </Typography>
+
+                <CardRow label='Address' text={address} />
+                <CardRow label='City' text={city} />
+                <CardRow label='Index' text={zip} />
+                <CardRow
+                    label='Rooms'
+                    text={rooms}
+                    siblingLabel='Bathrooms'
+                    siblingText={bathrooms}
+                />
+                <CardRow label='Living SqFt' text={living_sqft} />
+                <CardRow label='Details' text={other_details} />
             </CardContent>
             <CardActions>
                 <Button
@@ -85,7 +68,7 @@ const Card = ({ info }) => {
                     variant='outlined'
                     color='error'
                     startIcon={<DeleteIcon />}
-                    onClick={() => deleteAdvertisementMutation.mutate({ id })}
+                    onClick={() => handleOpen(id)}
                 >
                     Delete
                 </Button>

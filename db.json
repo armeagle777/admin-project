@@ -9,7 +9,7 @@
       "rooms": 232323,
       "bathrooms": 2,
       "living_sqft": 120,
-      "other_details": "Very good appartment jaaaan uxxxx"
+      "other_details": "Very good appartment jaaaan uxxxx asdfasd asdasd asdasd asdasdasd asd"
     },
     {
       "city": "Bla-bla",
@@ -30,7 +30,7 @@
       "rooms": 3,
       "bathrooms": 2,
       "living_sqft": 120,
-      "other_details": "wauuuu, ......",
+      "other_details": "wauuuu, great great great great great great great great great great great great",
       "id": 5
     },
     {
@@ -118,41 +118,8 @@
       "rooms": 3,
       "bathrooms": 2,
       "living_sqft": 120,
-      "other_details": "wauuuu, ......",
+      "other_details": "wauuuu,  jhkj  ;kllkj lk",
       "id": 13
-    },
-    {
-      "city": "asdsadf",
-      "address": "asdasdagdsfg dfgdfg",
-      "zip": "dfgdfgdfg",
-      "price": 222,
-      "rooms": 33,
-      "bathrooms": 33,
-      "living_sqft": 2222,
-      "other_details": "sadfasdasd",
-      "id": 15
-    },
-    {
-      "city": "Yerevan",
-      "address": "Shahumyan street",
-      "zip": "0045",
-      "price": 55000,
-      "rooms": 2,
-      "bathrooms": 1,
-      "living_sqft": 120,
-      "other_details": "aslksdfg dsf;gld';lfg kdagasFDGAFG",
-      "id": 16
-    },
-    {
-      "city": "Yerevan",
-      "address": "Araratyan strees 23",
-      "zip": "0056`",
-      "price": 23000,
-      "rooms": 12,
-      "bathrooms": 2,
-      "living_sqft": 230,
-      "other_details": "Best house You can ever see",
-      "id": 17
     }
   ]
 }
